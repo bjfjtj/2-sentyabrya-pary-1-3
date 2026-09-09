@@ -1,0 +1,13 @@
+class Graph:
+    def __init__(self, data):
+        self.data = data[:]      # копия списка
+        self.is_show = True
+
+    def show_table(self):
+        if not self.is_show:
+            print("Отображение данных закрыто")
+        else:
+            print(" ".join(map(str, self.data)))
+
+    def set_show(self, fl_show):
+        self.is_show = fl_show
